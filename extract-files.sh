@@ -4,7 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-<<<<<<< HEAD
 # Sourced by the common device repo when extracting device-specific blobs
 function blob_fixup() {
     case "${1}" in
@@ -34,9 +33,5 @@ export DEVICE_COMMON=sdm845-common
 export VENDOR=xiaomi
 
 export DEVICE_BRINGUP_YEAR=2018
-
-# Load com.vidhance.node.eis shim
-VIDHANCE_EIS="$BLOB_ROOT"/vendor/lib/camera/components/com.vidhance.node.eis.so
-patchelf --add-needed com.vidhance.node.eis.shim.so "$VIDHANCE_EIS"
 
 "./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
